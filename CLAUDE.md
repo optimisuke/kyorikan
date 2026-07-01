@@ -23,8 +23,10 @@ python3 -m http.server 8000   # ローカルサーブ（file:// では Nominatim
 - **`zoomSnap: 0` は必須**。Leaflet はデフォルトで zoom を整数にスナップするため、これがないと小数の補正 zoom が丸められて同期が壊れる。
 - **無限ループ防止**: プログラムによる `setZoom` は `{ animate: false }` で同期的にイベントを発火させ、`isSyncing` フラグで再入を防ぐ。`animate: true` に変えるとイベントが非同期になりフラグが機能しなくなるので注意。
 - **基準/追従の切り替え**: ユーザーが操作した側の地図が基準（primary）になる。`zoomend` と `moveend` の両方で同期する（パンだけでも中心緯度が変わり補正値が変わるため）。
+- **ホイールズームは自前実装**（`enableSmoothWheelZoom`）: Leaflet 標準の `scrollWheelZoom` は1ジェスチャのズーム量に上限があり、タッチパッドで引っかかる感触になるため無効化し、wheel イベントごとに `setZoomAround(..., {animate:false})` している。`ctrlKey=true` はタッチパッドのピンチ（ブラウザ合成イベント）で、感度を変えている。
+- **初期位置の保存**: localStorage キー `kyorikan.defaultView` に両地図の center/zoom を保存。読み込み時に `isValidView` で検証し、壊れていればデフォルト（東京・那覇）に戻す。
 
 ## 外部サービスの制約
 
 - **Nominatim**: 1リクエスト/秒のレート制限をクライアント側で実装済み（`lastNominatimRequest`）。インクリメンタル検索は実装しないこと。ブラウザの fetch では `User-Agent` ヘッダーは設定できない（forbidden header）ので設定コードを書かないこと。
-- **OpenStreetMap タイル**: attribution 表示は必須、消さないこと。タイル URL は `{s}` サブドメイン形式が非推奨のため `tile.openstreetmap.org` を直接使う。
+- **地図タイル**: CARTO Voyager（`basemaps.cartocdn.com`、キー不要・非商用無料）。attribution（OSM + CARTO）は必須、消さないこと。

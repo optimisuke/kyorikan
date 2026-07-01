@@ -1,3 +1,16 @@
+:root {
+  --bg: #0b1120;
+  --surface: #121a2c;
+  --surface-2: #1a2540;
+  --border: #253052;
+  --text: #e7ecf6;
+  --muted: #8d99b4;
+  --accent: #38bdf8;
+  --accent-2: #818cf8;
+  --accent-grad: linear-gradient(135deg, #38bdf8, #818cf8);
+  --danger: #fb7185;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,46 +24,86 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
-  color: #1f2933;
-  background: #f5f7fa;
+  font-family: "Inter", "Noto Sans JP", "Hiragino Sans", sans-serif;
+  color: var(--text);
+  background: var(--bg);
 }
+
+/* ---- ヘッダー ---- */
 
 .app-header {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 10px 16px;
-  background: #fff;
-  border-bottom: 1px solid #e0e4e8;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(60% 160% at 12% 0%, rgba(56, 189, 248, 0.12), transparent 60%),
+    radial-gradient(50% 160% at 60% 0%, rgba(129, 140, 248, 0.10), transparent 60%),
+    var(--bg);
 }
 
 .app-header h1 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
 }
 
 .tagline {
   flex: 1;
   margin: 0;
   font-size: 0.8rem;
-  color: #6b7480;
+  color: var(--muted);
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ghost-btn {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.ghost-btn:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: rgba(56, 189, 248, 0.08);
 }
 
 .primary-indicator {
-  font-size: 0.85rem;
-  background: #eef4ff;
-  color: #2456c4;
-  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent-grad);
+  padding: 6px 14px;
   border-radius: 999px;
   white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(56, 189, 248, 0.35);
 }
+
+/* ---- パネル ---- */
 
 .panels {
   flex: 1;
   display: flex;
-  gap: 8px;
-  padding: 8px;
+  gap: 12px;
+  padding: 12px;
   min-height: 0;
 }
 
@@ -58,120 +111,188 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border: 2px solid #e0e4e8;
-  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
   overflow: hidden;
   min-width: 0;
   min-height: 0;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .panel.is-primary {
-  border-color: #2456c4;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 28px rgba(56, 189, 248, 0.18);
 }
 
 .panel-header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 10px 4px;
+  gap: 10px;
+  padding: 10px 12px 6px;
 }
 
 .panel-name {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   white-space: nowrap;
+  color: var(--muted);
+}
+
+.panel.is-primary .panel-name {
+  color: var(--accent);
 }
 
 .search-form {
   flex: 1;
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
 .search-form input {
   flex: 1;
   min-width: 0;
-  padding: 6px 10px;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
   font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search-form input::placeholder {
+  color: #5c6884;
+}
+
+.search-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
 }
 
 .search-form button {
-  padding: 6px 14px;
+  padding: 7px 18px;
   border: none;
-  border-radius: 6px;
-  background: #2456c4;
+  border-radius: 999px;
+  background: var(--accent-grad);
   color: #fff;
   font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
   cursor: pointer;
+  transition: filter 0.15s;
 }
 
 .search-form button:hover {
-  background: #1c4499;
+  filter: brightness(1.15);
 }
 
 .search-status {
   margin: 0;
-  padding: 0 10px 6px;
+  padding: 0 14px 6px;
   min-height: 1.2em;
   font-size: 0.75rem;
-  color: #6b7480;
+  color: var(--muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .search-status.error {
-  color: #c0392b;
+  color: var(--danger);
 }
 
 .map {
   flex: 1;
   min-height: 200px;
+  background: #dfe8ef; /* タイル読み込み中の下地 */
 }
 
 .panel-footer {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 10px;
-  border-top: 1px solid #eef1f4;
-  font-size: 0.9rem;
+  padding: 9px 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .distance-value {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  color: var(--accent);
 }
 
 .clear-btn {
   margin-left: auto;
-  padding: 4px 12px;
-  border: 1px solid #cbd2d9;
-  border-radius: 6px;
-  background: #fff;
-  color: #52606d;
-  font-size: 0.8rem;
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-family: inherit;
   cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
 }
 
 .clear-btn:hover {
-  background: #f5f7fa;
+  color: var(--text);
+  border-color: var(--muted);
 }
 
 .app-footer {
-  padding: 6px 16px;
+  padding: 8px 20px;
   font-size: 0.75rem;
-  color: #6b7480;
+  color: var(--muted);
 }
 
 .app-footer p {
   margin: 0;
 }
 
-@media (max-width: 800px) {
+/* ---- Leaflet コントロールをダークUIに合わせる ---- */
+
+.leaflet-control-zoom.leaflet-bar {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.leaflet-control-zoom a {
+  background: var(--surface);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.leaflet-control-zoom a:hover {
+  background: var(--surface-2);
+  color: var(--accent);
+}
+
+.leaflet-control-scale-line {
+  background: rgba(11, 17, 32, 0.72);
+  color: var(--text);
+  border-color: var(--text);
+  font-family: inherit;
+}
+
+.leaflet-control-attribution {
+  background: rgba(11, 17, 32, 0.72);
+  color: var(--muted);
+}
+
+.leaflet-control-attribution a {
+  color: var(--accent);
+}
+
+/* ---- レスポンシブ ---- */
+
+@media (max-width: 840px) {
   body {
     height: auto;
     min-height: 100dvh;
@@ -179,6 +300,12 @@ body {
 
   .app-header {
     flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .tagline {
+    flex-basis: 100%;
+    order: 3;
   }
 
   .panels {

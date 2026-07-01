@@ -10,6 +10,7 @@
 - 検索ボックスに地名・住所を入れて Enter（または検索ボタン）で地図が移動します。`35.68, 139.76` のような緯度経度の直接入力にも対応しています
 - 地図上を2点クリックすると2点間の実距離（km）を表示します。3回目のクリックで計測をやり直せます
 - 両地図のスケールバーが同じ実距離を示していれば、縮尺同期が正しく機能しています
+- ヘッダーの「初期位置として保存」で、現在の両地図の位置・ズームを次回の初期表示にできます（ブラウザの localStorage に保存。「リセット」でデフォルトに戻ります）
 
 ## 仕組み
 
@@ -22,7 +23,7 @@ Web メルカトルでは 1px あたりの実距離が `m/px = C × cos(緯度) 
 ## 技術スタック
 
 - [Leaflet](https://leafletjs.com/) 1.9.4（CDN、API キー不要）
-- [OpenStreetMap](https://www.openstreetmap.org/) タイル
+- [CARTO Voyager](https://carto.com/basemaps/) ベースマップタイル（データは © OpenStreetMap contributors、キー不要）
 - [Nominatim](https://nominatim.org/) geocoding API（地名検索）
 - Vanilla JS、ビルド不要の静的サイト
 

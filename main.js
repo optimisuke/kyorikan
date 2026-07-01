@@ -3,10 +3,34 @@
 const MIN_ZOOM = 2;
 const MAX_ZOOM = 19;
 
-const INITIAL = {
+const STORAGE_KEY = 'kyorikan.defaultView';
+
+const FALLBACK_VIEW = {
   A: { center: [35.6812, 139.7671], zoom: 13 }, // 東京駅
   B: { center: [26.2124, 127.6809], zoom: 13 }, // 那覇
 };
+
+function isValidView(v) {
+  return (
+    v &&
+    Array.isArray(v.center) &&
+    v.center.length === 2 &&
+    v.center.every(Number.isFinite) &&
+    Number.isFinite(v.zoom)
+  );
+}
+
+function loadInitialViews() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    if (saved && isValidView(saved.A) && isValidView(saved.B)) return saved;
+  } catch {
+    // 壊れたデータは無視してデフォルトに戻す
+  }
+  return FALLBACK_VIEW;
+}
+
+const INITIAL = loadInitialViews();
 
 const maps = {};
 const measurements = {
@@ -36,13 +60,36 @@ function createMap(key) {
     zoomDelta: 0.5,
     minZoom: MIN_ZOOM,
     maxZoom: MAX_ZOOM,
+    scrollWheelZoom: false, // 標準のホイールズームは無効化し、下の自前処理に置き換える
   });
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
     maxZoom: MAX_ZOOM,
   }).addTo(map);
   L.control.scale({ metric: true, imperial: false, maxWidth: 150 }).addTo(map);
+  enableSmoothWheelZoom(map);
   return map;
+}
+
+// Leaflet標準のスクロールズームは1ジェスチャのズーム量に上限があり、
+// デバウンスで段階的に動くためタッチパッドだと引っかかる感触になる。
+// wheelイベントごとに即座にsetZoomAroundすることで連続的なズームにする。
+function enableSmoothWheelZoom(map) {
+  map.getContainer().addEventListener(
+    'wheel',
+    (e) => {
+      e.preventDefault();
+      // deltaMode 1 (行単位・Firefoxのマウスホイール等) はピクセル相当に換算
+      const deltaY = e.deltaY * (e.deltaMode === 1 ? 33 : 1);
+      // ctrlKey=true はタッチパッドのピンチ操作（ブラウザが合成するイベント）
+      const rate = e.ctrlKey ? 1 / 100 : 1 / 250;
+      const target = map.getZoom() - deltaY * rate;
+      map.setZoomAround(map.mouseEventToContainerPoint(e), target, { animate: false });
+    },
+    { passive: false }
+  );
 }
 
 // ---- 縮尺同期 --------------------------------------------------------------
@@ -180,6 +227,39 @@ async function handleSearch(key) {
   }
 }
 
+// ---- 初期位置の保存（localStorage） ----------------------------------------
+
+function flashButton(button, text) {
+  const original = button.dataset.label || (button.dataset.label = button.textContent);
+  button.textContent = text;
+  clearTimeout(button._flashTimer);
+  button._flashTimer = setTimeout(() => {
+    button.textContent = original;
+  }, 1600);
+}
+
+function saveDefaultView() {
+  const data = {};
+  for (const k of ['A', 'B']) {
+    const c = maps[k].getCenter();
+    data[k] = { center: [c.lat, c.lng], zoom: maps[k].getZoom() };
+  }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  flashButton(document.getElementById('save-default'), '保存しました ✓');
+}
+
+function resetDefaultView() {
+  localStorage.removeItem(STORAGE_KEY);
+  isSyncing = true; // 途中状態で同期が走らないようにまとめて移動する
+  for (const k of ['A', 'B']) {
+    maps[k].setView(FALLBACK_VIEW[k].center, FALLBACK_VIEW[k].zoom, { animate: false });
+  }
+  isSyncing = false;
+  setPrimary('A');
+  syncSecondaryMap();
+  flashButton(document.getElementById('reset-default'), '戻しました ✓');
+}
+
 // ---- 初期化 ----------------------------------------------------------------
 
 function initPanel(key) {
@@ -197,3 +277,6 @@ initPanel('A');
 initPanel('B');
 setPrimary('A');
 syncSecondaryMap(); // 初期表示の時点から縮尺を揃える
+
+document.getElementById('save-default').addEventListener('click', saveDefaultView);
+document.getElementById('reset-default').addEventListener('click', resetDefaultView);
