@@ -295,26 +295,60 @@ body {
 /* ---- レスポンシブ ---- */
 
 @media (max-width: 840px) {
-  body {
-    height: auto;
-    min-height: 100dvh;
-  }
-
+  /* スクロールなしで1画面に収める：固定高のまま2パネルを縦に均等分割し、
+     説明文などの補助要素は非表示にする */
   .app-header {
     flex-wrap: wrap;
-    row-gap: 8px;
+    row-gap: 6px;
+    padding: 8px 12px;
   }
 
-  .tagline {
-    flex-basis: 100%;
-    order: 3;
+  .app-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .tagline,
+  .app-footer {
+    display: none;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .ghost-btn,
+  .primary-indicator {
+    font-size: 0.72rem;
+    padding: 4px 10px;
   }
 
   .panels {
-    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .panel-header {
+    padding: 6px 8px 4px;
+  }
+
+  .search-status {
+    padding: 0 10px 4px;
+    font-size: 0.7rem;
+  }
+
+  .panel-footer {
+    padding: 6px 10px;
+    font-size: 0.8rem;
   }
 
   .map {
-    min-height: 320px;
+    min-height: 0;
+  }
+}
+
+/* 縦向きのときだけ2パネルを縦に積む（横向きの小画面では左右並びのまま） */
+@media (max-width: 840px) and (orientation: portrait) {
+  .panels {
+    flex-direction: column;
   }
 }
