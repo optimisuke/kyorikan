@@ -1,0 +1,63 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - heading "キョリカン" [level=1] [ref=e3]
+    - paragraph [ref=e4]: 2つの地図を同じ縮尺で並べて、距離感をくらべる
+    - generic [ref=e5]: "基準: 地図A"
+  - main [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: 地図A
+        - generic [ref=e10]:
+          - searchbox "地図Aの場所検索" [active] [ref=e11]: 26.2124, 127.6809
+          - button "検索" [ref=e12] [cursor=pointer]
+      - paragraph [ref=e13]: 緯度 26.2124, 経度 127.6809 に移動しました
+      - generic [ref=e14]:
+        - generic:
+          - generic:
+            - img
+        - generic:
+          - generic [ref=e15]:
+            - button "Zoom in" [ref=e16] [cursor=pointer]: +
+            - button "Zoom out" [ref=e17] [cursor=pointer]: −
+          - generic [ref=e19]: 500 m
+          - generic [ref=e20]:
+            - link "Leaflet" [ref=e21] [cursor=pointer]:
+              - /url: https://leafletjs.com
+              - img [ref=e22]
+              - text: Leaflet
+            - text: "| ©"
+            - link "OpenStreetMap" [ref=e26] [cursor=pointer]:
+              - /url: https://www.openstreetmap.org/copyright
+            - text: contributors
+      - generic [ref=e27]:
+        - generic [ref=e28]: "計測距離:"
+        - generic [ref=e29]: —
+        - button "クリア" [ref=e30] [cursor=pointer]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: 地図B
+        - generic [ref=e34]:
+          - searchbox "地図Bの場所検索" [ref=e35]: 京都駅
+          - button "検索" [ref=e36] [cursor=pointer]
+      - paragraph [ref=e37]: 京都, 南北自由通路, 東九条上殿田町, 南区, 京都市, 京都府, 601-8002, 日本
+      - generic [ref=e38]:
+        - generic:
+          - generic [ref=e39]:
+            - button "Zoom in" [ref=e40] [cursor=pointer]: +
+            - button "Zoom out" [ref=e41] [cursor=pointer]: −
+          - generic [ref=e43]: 500 m
+          - generic [ref=e44]:
+            - link "Leaflet" [ref=e45] [cursor=pointer]:
+              - /url: https://leafletjs.com
+              - img [ref=e46]
+              - text: Leaflet
+            - text: "| ©"
+            - link "OpenStreetMap" [ref=e50] [cursor=pointer]:
+              - /url: https://www.openstreetmap.org/copyright
+            - text: contributors
+      - generic [ref=e51]:
+        - generic [ref=e52]: "計測距離:"
+        - generic [ref=e53]: —
+        - button "クリア" [ref=e54] [cursor=pointer]
+  - contentinfo [ref=e55]:
+    - paragraph [ref=e56]: どちらかの地図を動かすと、もう片方が同じ実距離スケールに追従します。地図上を2点クリックすると距離を計測できます。

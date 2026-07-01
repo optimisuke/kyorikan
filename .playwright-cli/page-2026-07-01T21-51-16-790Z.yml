@@ -1,0 +1,638 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - button "メイン コンテンツにスキップ"
+    - banner "Microsoft Azure" [ref=e3]:
+      - button "Microsoft Cloud メニューを表示する" [ref=e5] [cursor=pointer]:
+        - img [ref=e7]
+      - heading "Microsoft Azure" [level=1] [ref=e9]:
+        - link "Microsoft Azure" [ref=e10] [cursor=pointer]:
+          - /url: "#home"
+      - search [ref=e11]:
+        - generic [ref=e12]:
+          - img [ref=e14]
+          - textbox "リソース、サービス、ドキュメントの検索 (G+/)" [ref=e17]
+      - button "Copilot" [ref=e18] [cursor=pointer]:
+        - img [ref=e20]
+        - generic [ref=e22]: Copilot
+      - generic [ref=e23]:
+        - button "Cloud Shell" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+        - button "通知" [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+        - button "設定" [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+        - button "サポートとトラブルシューティング" [ref=e35] [cursor=pointer]:
+          - img [ref=e36]
+        - button "フィードバック" [ref=e38] [cursor=pointer]:
+          - img [ref=e39]
+      - button "アカウント メニュー 現在 既定のディレクトリ (naosuke0219gmail.onmicrosoft.com) テナントで naosuke0219@gmail.com としてサインインしています" [ref=e42] [cursor=pointer]:
+        - 'generic "名前: Ito Naosuke メール: naosuke0219@gmail.com ディレクトリ: 既定のディレクトリ (4b95b7d1-1ba0-4ada-9ed4-800fdef9ba1b) ドメイン: naosuke0219gmail.onmicrosoft.com サインインで多要素認証が使用されました。" [ref=e43]':
+          - generic [ref=e44]:
+            - generic [ref=e45]: naosuke0219@gmail.com
+            - generic [ref=e46]: 既定のディレクトリ (naosuke0219gmail.onmicrosoft.com)
+          - img [ref=e49]
+    - generic [ref=e53]:
+      - navigation "サービス" [ref=e54]:
+        - generic [ref=e55]:
+          - button "テキスト ラベルの非表示" [ref=e56] [cursor=pointer]:
+            - img [ref=e57]
+          - link "リソースの作成" [ref=e59] [cursor=pointer]:
+            - /url: "#create/hub"
+            - img [ref=e61]
+            - generic [ref=e64]: リソースの作成
+          - link "Azure ホーム" [ref=e65] [cursor=pointer]:
+            - /url: "#home"
+            - img [ref=e67]
+            - generic [ref=e69]: ホーム
+          - link "ダッシュボード" [ref=e70] [cursor=pointer]:
+            - /url: "#dashboard"
+            - img [ref=e72]
+            - generic [ref=e74]: ダッシュボード
+          - link "すべてのサービス" [ref=e75] [cursor=pointer]:
+            - /url: "#allservices/category/All"
+            - img [ref=e77]
+            - generic [ref=e79]: すべてのサービス
+        - generic [ref=e80]:
+          - img [ref=e83]
+          - generic [ref=e85]: お気に入り
+        - list "お気に入りのサービス" [ref=e88]:
+          - listitem [ref=e89]:
+            - link "アプリケーション テンプレート" [ref=e90] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_CloudNative/CuratedWorkloads.ReactView"
+              - img [ref=e92]
+              - generic [ref=e94]: アプリケーション テンプレート
+          - listitem [ref=e95]:
+            - link "すべてのリソース" [ref=e96] [cursor=pointer]:
+              - /url: "#view/HubsExtension/ServiceMenuBlade/extension/Microsoft_Azure_Resources/menuId/ResourceManager/itemId/browseAll"
+              - img [ref=e98]
+              - generic [ref=e100]: すべてのリソース
+          - listitem [ref=e101]:
+            - link "リソース グループ" [ref=e102] [cursor=pointer]:
+              - /url: "#view/HubsExtension/ServiceMenuBlade/extension/Microsoft_Azure_Resources/menuId/ResourceManager/itemId/resourcegroups"
+              - img [ref=e104]
+              - generic [ref=e106]: リソース グループ
+          - listitem [ref=e107]:
+            - link "App Services" [ref=e108] [cursor=pointer]:
+              - /url: "#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites"
+              - img [ref=e110]
+              - generic [ref=e112]: App Services
+          - listitem [ref=e113]:
+            - link "関数アプリ" [ref=e114] [cursor=pointer]:
+              - /url: "#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp"
+              - img [ref=e116]
+              - generic [ref=e118]: 関数アプリ
+          - listitem [ref=e119]:
+            - link "Azure SQL Database" [ref=e120] [cursor=pointer]:
+              - /url: "#view/HubsExtension/ServiceMenuBlade/extension/SqlAzureExtension/menuId/AzureSqlHub/itemId/SingleDatabase"
+              - img [ref=e122]
+              - generic [ref=e124]: Azure SQL Database
+          - listitem [ref=e125]:
+            - link "Azure Cosmos DB" [ref=e126] [cursor=pointer]:
+              - /url: "#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.DocumentDb%2FdatabaseAccounts"
+              - img [ref=e128]
+              - generic [ref=e130]: Azure Cosmos DB
+          - listitem [ref=e131]:
+            - link "仮想マシン" [ref=e132] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_ComputeHub/ComputeHubMenuBlade/virtualMachinesBrowse"
+              - img [ref=e134]
+              - generic [ref=e136]: 仮想マシン
+          - listitem [ref=e137]:
+            - link "ロード バランサー" [ref=e138] [cursor=pointer]:
+              - /url: "#view/HubsExtension/AssetMenuBlade/~/loadBalancers/assetName/LoadBalancerAndContentDelivery/extensionName/Microsoft_Azure_Network"
+              - img [ref=e140]
+              - generic [ref=e142]: ロード バランサー
+          - listitem [ref=e143]:
+            - link "ストレージ アカウント" [ref=e144] [cursor=pointer]:
+              - /url: "#view/Microsoft_Azure_StorageHub/StorageHub.MenuView/~/StorageAccountsBrowse"
+              - img [ref=e146]
+              - generic [ref=e148]: ストレージ アカウント
+          - listitem [ref=e149]:
+            - link "仮想ネットワーク" [ref=e150] [cursor=pointer]:
+              - /url: "#view/HubsExtension/AssetMenuBlade/~/virtualnetworks/assetName/NetworkFoundation/extensionName/Microsoft_Azure_Network"
+              - img [ref=e152]
+              - generic [ref=e154]: 仮想ネットワーク
+          - listitem [ref=e155]:
+            - link "Microsoft Entra ID" [ref=e156] [cursor=pointer]:
+              - /url: "#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade"
+              - img [ref=e158]
+              - generic [ref=e160]: Microsoft Entra ID
+          - listitem [ref=e161]:
+            - link "監視" [ref=e162] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade"
+              - img [ref=e164]
+              - generic [ref=e166]: 監視
+          - listitem [ref=e167]:
+            - link "Advisor" [ref=e168] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_Expert/AdvisorMenuBlade"
+              - img [ref=e170]
+              - generic [ref=e172]: Advisor
+          - listitem [ref=e173]:
+            - link "Microsoft Defender for Cloud" [ref=e174] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_Security/SecurityMenuBlade"
+              - img [ref=e176]
+              - generic [ref=e178]: Microsoft Defender for Cloud
+          - listitem [ref=e179]:
+            - link "コストの管理と請求" [ref=e180] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_GTM/ModernBillingMenuBlade"
+              - img [ref=e182]
+              - generic [ref=e184]: コストの管理と請求
+          - listitem [ref=e185]:
+            - link "ヘルプとサポート" [ref=e186] [cursor=pointer]:
+              - /url: "#blade/Microsoft_Azure_Support/HelpAndSupportBlade"
+              - img [ref=e188]
+              - generic [ref=e190]: ヘルプとサポート
+      - main [ref=e191]:
+        - generic [ref=e192]:
+          - navigation "ナビゲーション履歴" [ref=e195]:
+            - navigation "breadcrumb" [ref=e198]:
+              - list [ref=e199]:
+                - listitem [ref=e200]:
+                  - link "ホーム" [ref=e201] [cursor=pointer]:
+                    - /url: "#home"
+                  - img [ref=e204]
+                - listitem [ref=e206]:
+                  - link "コストの管理と請求 | 課金スコープ" [ref=e207] [cursor=pointer]:
+                    - /url: "#view/Microsoft_Azure_GTM/ModernBillingMenuBlade/~/BillingAccounts"
+                  - img [ref=e210]
+                - listitem [ref=e212]:
+                  - link "Naosuke Ito" [ref=e213] [cursor=pointer]:
+                    - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/overview/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+          - generic [ref=e215]:
+            - region "Naosuke Ito | 請求書 課金アカウント" [ref=e216]:
+              - generic "Naosuke Ito | 請求書 課金アカウント" [ref=e219]:
+                - generic [ref=e220]:
+                  - img [ref=e222]
+                  - generic [ref=e224]:
+                    - generic [ref=e225]:
+                      - heading "Naosuke Ito | 請求書" [level=2] [ref=e226]
+                      - generic [ref=e227]:
+                        - button "その他のコンテンツ アクション" [ref=e229] [cursor=pointer]:
+                          - img [ref=e232]
+                        - button "コンテンツ 'Naosuke Ito | 請求書' を閉じる" [ref=e235] [cursor=pointer]:
+                          - img [ref=e238]
+                    - generic [ref=e241]: 課金アカウント
+              - generic [ref=e245]:
+                - generic [ref=e252]:
+                  - generic [ref=e253]:
+                    - generic [ref=e254]:
+                      - img [ref=e256]
+                      - generic "検索ボックス" [ref=e258]:
+                        - searchbox "検索ボックス" [ref=e263]
+                    - button "すべてのヘッダーを展開" [ref=e264]:
+                      - img [ref=e265]
+                  - list [ref=e269]:
+                    - listitem "クイック アクセス" [ref=e270]:
+                      - list "クイック アクセス グループのアイテムの一覧" [ref=e271]:
+                        - listitem [ref=e272]:
+                          - link "概要" [ref=e273] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/overview/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e275]
+                            - generic [ref=e277]: 概要
+                    - listitem "Quick Access" [ref=e278]:
+                      - button "Quick Access の切り替え" [ref=e279] [cursor=pointer]:
+                        - img [ref=e281]
+                        - generic [ref=e283]: Quick Access
+                    - listitem "コスト管理" [ref=e284]:
+                      - button "コスト管理 の切り替え" [ref=e285] [cursor=pointer]:
+                        - img [ref=e287]
+                        - generic [ref=e289]: コスト管理
+                    - listitem "請求" [ref=e290]:
+                      - button "請求 の切り替え" [expanded] [ref=e291] [cursor=pointer]:
+                        - img [ref=e293]
+                        - generic [ref=e295]: 請求
+                      - list "請求 グループのアイテムの一覧" [ref=e296]:
+                        - listitem [ref=e297]:
+                          - link "請求書 お気に入りに 請求書 を追加" [ref=e298] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/invoices/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e300]
+                            - generic [ref=e302]: 請求書
+                            - button "お気に入りに 請求書 を追加" [ref=e303]:
+                              - img [ref=e304]
+                        - listitem [ref=e306]:
+                          - link "支払い方法 お気に入りに 支払い方法 を追加" [ref=e307] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/paymentMethodItem/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e309]
+                            - generic [ref=e311]: 支払い方法
+                            - button "お気に入りに 支払い方法 を追加" [ref=e312]:
+                              - img [ref=e313]
+                        - listitem [ref=e315]:
+                          - link "支払履歴 お気に入りに 支払履歴 を追加" [ref=e316] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/paymentHistory/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e318]
+                            - generic [ref=e320]: 支払履歴
+                            - button "お気に入りに 支払履歴 を追加" [ref=e321]:
+                              - img [ref=e322]
+                        - listitem [ref=e324]:
+                          - link "予約トランザクション お気に入りに 予約トランザクション を追加" [ref=e325] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/reservations/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e327]
+                            - generic [ref=e329]: 予約トランザクション
+                            - button "お気に入りに 予約トランザクション を追加" [ref=e330]:
+                              - img [ref=e331]
+                        - listitem [ref=e333]:
+                          - link "課金プロファイル お気に入りに 課金プロファイル を追加" [ref=e334] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/billingProfiles/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e336]
+                            - generic [ref=e338]: 課金プロファイル
+                            - button "お気に入りに 課金プロファイル を追加" [ref=e339]:
+                              - img [ref=e340]
+                        - listitem [ref=e342]:
+                          - link "利点 お気に入りに 利点 を追加" [ref=e343] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/benefits/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e345]
+                            - generic [ref=e347]: 利点
+                            - button "お気に入りに 利点 を追加" [ref=e348]:
+                              - img [ref=e349]
+                    - listitem "製品とサービス" [ref=e351]:
+                      - button "製品とサービス の切り替え" [expanded] [ref=e352] [cursor=pointer]:
+                        - img [ref=e354]
+                        - generic [ref=e356]: 製品とサービス
+                      - list "製品とサービス グループのアイテムの一覧" [ref=e357]:
+                        - listitem [ref=e358]:
+                          - link "すべての課金サブスクリプション お気に入りに すべての課金サブスクリプション を追加" [ref=e359] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/allProductSubscriptions/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e361]
+                            - generic [ref=e363]: すべての課金サブスクリプション
+                            - button "お気に入りに すべての課金サブスクリプション を追加" [ref=e364]:
+                              - img [ref=e365]
+                        - listitem [ref=e367]:
+                          - link "予約とハイブリッド特典 お気に入りに 予約とハイブリッド特典 を追加" [ref=e368] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/reservationsBrowse/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e370]
+                            - generic [ref=e372]: 予約とハイブリッド特典
+                            - button "お気に入りに 予約とハイブリッド特典 を追加" [ref=e373]:
+                              - img [ref=e374]
+                        - listitem [ref=e376]:
+                          - link "節約プラン お気に入りに 節約プラン を追加" [ref=e377] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/savingsPlansBrowse/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e379]
+                            - generic [ref=e381]: 節約プラン
+                            - button "お気に入りに 節約プラン を追加" [ref=e382]:
+                              - img [ref=e383]
+                    - listitem "設定" [ref=e385]:
+                      - button "設定 の切り替え" [expanded] [ref=e386] [cursor=pointer]:
+                        - img [ref=e388]
+                        - generic [ref=e390]: 設定
+                      - list "設定 グループのアイテムの一覧" [ref=e391]:
+                        - listitem [ref=e392]:
+                          - link "プロパティ お気に入りに プロパティ を追加" [ref=e393] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/properties/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e395]
+                            - generic [ref=e397]: プロパティ
+                            - button "お気に入りに プロパティ を追加" [ref=e398]:
+                              - img [ref=e399]
+                        - listitem [ref=e401]:
+                          - link "エクスポート お気に入りに エクスポート を追加" [ref=e402] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/exports/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e404]
+                            - generic [ref=e406]: エクスポート
+                            - button "お気に入りに エクスポート を追加" [ref=e407]:
+                              - img [ref=e408]
+                        - listitem [ref=e410]:
+                          - link "コストの割り当て お気に入りに コストの割り当て を追加" [ref=e411] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/costAllocation/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e413]
+                            - generic [ref=e415]: コストの割り当て
+                            - button "お気に入りに コストの割り当て を追加" [ref=e416]:
+                              - img [ref=e417]
+                        - listitem [ref=e419]:
+                          - link "譲渡要求 お気に入りに 譲渡要求 を追加" [ref=e420] [cursor=pointer]:
+                            - /url: "#view/Microsoft_Azure_GTM/Billing.MenuView/~/transfers/scopeId/%2Fproviders%2FMicrosoft.Billing%2FbillingAccounts%2F1fe21474-461d-58d1-3080-a1117d726785%3A5d4f27b8-bd53-4ea0-8be0-8318e42be4c0_2019-05-31/scope/BillingAccount"
+                            - img [ref=e422]
+                            - generic [ref=e424]: 譲渡要求
+                            - button "お気に入りに 譲渡要求 を追加" [ref=e425]:
+                              - img [ref=e426]
+                    - listitem "サポートとトラブルシューティング" [ref=e428]:
+                      - button "サポートとトラブルシューティング の切り替え" [ref=e429] [cursor=pointer]:
+                        - img [ref=e431]
+                        - generic [ref=e433]: サポートとトラブルシューティング
+                  - generic [ref=e434]: Cmd+Shift+F を押して、お気に入りを追加または削除します
+                - button "Naosuke Ito のメニューを非表示にする" [expanded] [ref=e435] [cursor=pointer]:
+                  - img [ref=e436]
+            - iframe [ref=e448]:
+              - generic [ref=f1e11]:
+                - menubar [ref=f1e15]:
+                  - menuitem "更新" [ref=f1e16] [cursor=pointer]:
+                    - generic [ref=f1e17]:
+                      - generic [ref=f1e18]: 
+                      - generic [ref=f1e20]: 更新
+                  - menuitem "CSV にエクスポート" [ref=f1e21] [cursor=pointer]:
+                    - generic [ref=f1e22]:
+                      - generic [ref=f1e23]: 
+                      - generic [ref=f1e25]: CSV にエクスポート
+                  - menuitem "ダウンロード" [disabled] [ref=f1e27]:
+                    - generic [ref=f1e28]:
+                      - generic [ref=f1e29]: 
+                      - generic [ref=f1e31]: ダウンロード
+                  - menuitem "アクセス権の管理" [ref=f1e33] [cursor=pointer]:
+                    - generic [ref=f1e34]:
+                      - generic [ref=f1e35]: 
+                      - generic [ref=f1e37]: アクセス権の管理
+                  - menuitem "請求書の詳細の編集" [ref=f1e38] [cursor=pointer]:
+                    - generic [ref=f1e39]:
+                      - generic [ref=f1e40]: 
+                      - generic [ref=f1e42]: 請求書の詳細の編集
+                      - generic [ref=f1e43]: 
+                  - menuitem "ヘルプ" [ref=f1e45] [cursor=pointer]:
+                    - generic [ref=f1e46]:
+                      - generic [ref=f1e47]: 
+                      - generic [ref=f1e49]: ヘルプ
+                  - menuitem "フィードバック" [ref=f1e50] [cursor=pointer]:
+                    - generic [ref=f1e51]:
+                      - generic [ref=f1e52]: 
+                      - generic [ref=f1e54]: フィードバック
+                - separator [ref=f1e55]
+                - region [ref=f1e57]:
+                  - generic [ref=f1e58]:
+                    - generic [ref=f1e60]: 
+                    - status [ref=f1e61]:
+                      - generic [ref=f1e63]:
+                        - text: Azure 予約インスタンスの価格や更新されたスキーマなど、2023 年 1 月以降の請求期間に、新しいバージョンの Azure Price Sheet をダウンロードできるようになりました。
+                        - link "詳細情報" [ref=f1e64] [cursor=pointer]:
+                          - /url: https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/mca-understand-pricesheet
+                    - button "メッセージ バーを閉じる" [ref=f1e65] [cursor=pointer]:
+                      - generic [ref=f1e67]: 
+                - region [ref=f1e69]:
+                  - generic [ref=f1e70]:
+                    - generic [ref=f1e72]: 
+                    - status [ref=f1e73]:
+                      - generic [ref=f1e75]:
+                        - text: 更新時には、Microsoft 365 管理センターまたはマーケットプレースで購入した同じライセンスベースのサブスクリプションについて請求書が 2 通発行される場合があります。これは、請求が後払いから前払いに切り替わったことによるものです。新しい請求書には請求期間が 1 日として記載されることにご注意ください。実際に請求の対象となったサービス期間については、請求の詳細情報をご確認ください。
+                        - link "この請求スケジュール変更に関する詳細情報" [ref=f1e76] [cursor=pointer]:
+                          - /url: https://go.microsoft.com/fwlink/?linkid=2328401
+                    - button "メッセージ バーを閉じる" [ref=f1e77] [cursor=pointer]:
+                      - generic [ref=f1e79]: 
+                - generic [ref=f1e81]:
+                  - text: 課金アカウントの請求書を表示します。毎月の請求書は、各課金プロファイルのカレンダー月の開始時に生成されます。Azure クレジットをお持ちの場合は、自動的に適用され、支払額が削減されます。支払い方法は請求書に記載されています。
+                  - link "請求書のタイミングに関する詳細情報" [ref=f1e82] [cursor=pointer]:
+                    - /url: https://go.microsoft.com/fwlink/?linkid=2072039
+                - generic [ref=f1e85]:
+                  - generic [ref=f1e86]: 請求額
+                  - generic [ref=f1e88]: ￥0
+                - generic [ref=f1e89]:
+                  - generic [ref=f1e90]:
+                    - generic [ref=f1e93]:
+                      - generic [ref=f1e95]: 
+                      - searchbox "検索" [ref=f1e96]
+                    - generic [ref=f1e97]:
+                      - 'button "状態: すべて" [ref=f1e99] [cursor=pointer]':
+                        - generic [ref=f1e100]: "状態:"
+                        - generic [ref=f1e101]: すべて
+                      - 'button "課金プロファイル: すべて" [ref=f1e103] [cursor=pointer]':
+                        - generic [ref=f1e104]: "課金プロファイル:"
+                        - generic [ref=f1e105]: すべて
+                      - 'button "期間: 過去 12 か月" [ref=f1e107] [cursor=pointer]':
+                        - generic [ref=f1e108]: "期間:"
+                        - generic [ref=f1e109]: 過去 12 か月
+                      - generic [ref=f1e111]:
+                        - generic [ref=f1e112]:
+                          - checkbox "請求額が 0 の請求書を除外する" [ref=f1e113]
+                          - generic [ref=f1e114] [cursor=pointer]:
+                            - generic [ref=f1e116]: 
+                            - generic [ref=f1e117]: 請求額が 0 の請求書を除外する
+                        - button "請求金額なしで作成された請求書を非表示にします。クレジットによって金額が $0 になった請求書は引き続き表示されます。" [ref=f1e118] [cursor=pointer]:
+                          - generic [ref=f1e120]: 
+                  - combobox [ref=f1e123]:
+                    - generic [ref=f1e124] [cursor=pointer]: リスト
+                    - generic [ref=f1e125] [cursor=pointer]:
+                      - generic: 
+                - generic [ref=f1e126]:
+                  - generic [ref=f1e127]: ‎1‎ 件の結果のうち ‎1‎ 件目から ‎1‎ 件目までを表示しています
+                  - status:
+                    - generic [ref=f1e128]: ‎1‎ 件の結果のうち ‎1‎ 件目から ‎1‎ 件目までを表示しています
+                  - button "この表の説明" [ref=f1e129] [cursor=pointer]
+                - generic [ref=f1e130]:
+                  - grid [ref=f1e134]:
+                    - row "すべての行を選択します 請求書 ID 請求日 (UTC) 請求期間 (UTC) 課金プロファイル 合計金額 ステータス 支払い 請求書のダウンロード" [ref=f1e135]:
+                      - columnheader "すべての行を選択します" [ref=f1e136]:
+                        - checkbox "すべての行を選択します" [ref=f1e138]:
+                          - generic [ref=f1e139] [cursor=pointer]:
+                            - generic [ref=f1e140]: 
+                            - generic [ref=f1e141]: 
+                      - generic [ref=f1e142]: すべての行を選択します
+                      - columnheader "請求書 ID" [ref=f1e143]:
+                        - button "請求書 ID" [ref=f1e145]:
+                          - generic [ref=f1e146]: 請求書 ID
+                          - generic [ref=f1e147]: 
+                          - generic [ref=f1e148]: 
+                      - button [ref=f1e149]
+                      - columnheader "請求日 (UTC)" [ref=f1e150]:
+                        - button "請求日 (UTC)" [ref=f1e152]:
+                          - generic [ref=f1e153]: 請求日 (UTC)
+                          - generic [ref=f1e154]: 
+                          - generic [ref=f1e155]: 
+                      - button [ref=f1e156]
+                      - columnheader "請求期間 (UTC)" [ref=f1e157]:
+                        - button "請求期間 (UTC)" [ref=f1e159]:
+                          - generic [ref=f1e160]: 請求期間 (UTC)
+                          - generic [ref=f1e161]: 
+                      - button [ref=f1e162]
+                      - columnheader "課金プロファイル" [ref=f1e163]:
+                        - button "課金プロファイル" [ref=f1e165]:
+                          - generic [ref=f1e166]: 課金プロファイル
+                          - generic [ref=f1e167]: 
+                          - generic [ref=f1e168]: 
+                      - button [ref=f1e169]
+                      - columnheader "合計金額" [ref=f1e170]:
+                        - button "合計金額" [ref=f1e172]:
+                          - generic [ref=f1e173]: 合計金額
+                          - generic [ref=f1e174]: 
+                          - generic [ref=f1e175]: 
+                      - button [ref=f1e176]
+                      - columnheader "ステータス" [ref=f1e177]:
+                        - button "ステータス" [ref=f1e179]:
+                          - generic [ref=f1e180]: ステータス
+                          - generic [ref=f1e181]: 
+                          - generic [ref=f1e182]: 
+                      - button [ref=f1e183]
+                      - columnheader "支払い" [ref=f1e184]:
+                        - button "支払い" [ref=f1e186]:
+                          - generic [ref=f1e187]: 支払い
+                          - generic [ref=f1e188]: 
+                      - button [ref=f1e189]
+                      - columnheader "請求書のダウンロード" [ref=f1e190]:
+                        - button "請求書のダウンロード" [ref=f1e192]:
+                          - generic [ref=f1e193]: 請求書のダウンロード
+                          - generic [ref=f1e194]: 
+                      - button [ref=f1e195]
+                      - columnheader [ref=f1e196]
+                    - row "G163868511 2026/6/9 2026/5/15 - 2026/5/31 Naosuke Ito ￥0 支払い済み N/A ダウンロード" [ref=f1e199]:
+                      - gridcell [ref=f1e200]:
+                        - checkbox [ref=f1e201]:
+                          - generic [ref=f1e202] [cursor=pointer]:
+                            - generic [ref=f1e203]: 
+                            - generic [ref=f1e204]: 
+                      - gridcell "G163868511" [ref=f1e205]:
+                        - button "G163868511" [ref=f1e207] [cursor=pointer]
+                      - gridcell "2026/6/9" [ref=f1e208]
+                      - gridcell "2026/5/15 - 2026/5/31" [ref=f1e209]
+                      - gridcell "Naosuke Ito" [ref=f1e210]:
+                        - button "Naosuke Ito" [ref=f1e211] [cursor=pointer]
+                      - gridcell "￥0" [ref=f1e212]
+                      - gridcell "支払い済み" [ref=f1e213]:
+                        - generic [ref=f1e214]: 
+                        - button "支払い済み" [ref=f1e215] [cursor=pointer]
+                      - gridcell "N/A" [ref=f1e216]
+                      - gridcell "ダウンロード" [ref=f1e217]:
+                        - button "ダウンロード" [ref=f1e218] [cursor=pointer]:
+                          - generic [ref=f1e219]: 
+                          - text: ダウンロード
+                      - gridcell [ref=f1e220]:
+                        - button [ref=f1e221] [cursor=pointer]:
+                          - generic [ref=f1e222]: 
+                  - generic [ref=f1e224]:
+                    - button "< 前へ" [disabled] [ref=f1e225]:
+                      - generic [ref=f1e228]: < 前へ
+                    - generic [ref=f1e229]:
+                      - generic [ref=f1e230]: ページ
+                      - combobox [ref=f1e232]:
+                        - generic [ref=f1e233] [cursor=pointer]: "1"
+                        - generic [ref=f1e234] [cursor=pointer]:
+                          - generic: 
+                      - generic [ref=f1e235]: /‎1‎
+                    - button "次へ >" [disabled] [ref=f1e236]:
+                      - generic [ref=f1e239]: 次へ >
+  - img [ref=e449]
+  - img [ref=e450]
+  - img [ref=e451]
+  - img [ref=e452]
+  - img [ref=e453]
+  - img [ref=e454]
+  - img [ref=e455]
+  - img [ref=e456]
+  - img [ref=e457]
+  - img [ref=e458]
+  - img [ref=e459]
+  - img [ref=e460]
+  - img [ref=e461]
+  - img [ref=e462]
+  - img [ref=e463]
+  - img [ref=e464]
+  - img [ref=e465]
+  - img [ref=e466]
+  - img [ref=e467]
+  - img [ref=e468]
+  - img [ref=e469]
+  - img [ref=e470]
+  - img [ref=e471]
+  - img [ref=e472]
+  - img [ref=e473]
+  - img [ref=e474]
+  - img [ref=e475]
+  - img [ref=e476]
+  - img [ref=e477]
+  - img [ref=e478]
+  - img [ref=e479]
+  - img [ref=e480]
+  - img [ref=e481]
+  - img [ref=e482]
+  - img [ref=e483]
+  - img [ref=e484]
+  - img [ref=e485]
+  - img [ref=e486]
+  - img [ref=e487]
+  - img [ref=e488]
+  - img [ref=e489]
+  - img [ref=e490]
+  - img [ref=e491]
+  - img [ref=e492]
+  - img [ref=e493]
+  - img [ref=e494]
+  - img [ref=e495]
+  - img [ref=e496]
+  - img [ref=e497]
+  - img [ref=e498]
+  - img [ref=e499]
+  - img [ref=e500]
+  - img [ref=e501]
+  - img [ref=e502]
+  - img [ref=e503]
+  - img [ref=e504]
+  - img [ref=e505]
+  - img [ref=e506]
+  - img [ref=e507]
+  - img [ref=e508]
+  - img [ref=e509]
+  - img [ref=e510]
+  - img [ref=e511]
+  - img [ref=e512]
+  - img [ref=e513]
+  - img [ref=e514]
+  - img [ref=e515]
+  - img [ref=e516]
+  - img [ref=e517]
+  - img [ref=e518]
+  - img [ref=e519]
+  - img [ref=e520]
+  - img [ref=e521]
+  - img [ref=e522]
+  - img [ref=e523]
+  - img [ref=e524]
+  - img [ref=e525]
+  - img [ref=e526]
+  - img [ref=e527]
+  - img [ref=e528]
+  - img [ref=e529]
+  - img [ref=e530]
+  - img [ref=e531]
+  - img [ref=e532]
+  - img [ref=e533]
+  - img [ref=e534]
+  - img [ref=e535]
+  - img [ref=e536]
+  - img [ref=e537]
+  - img [ref=e538]
+  - img [ref=e539]
+  - img [ref=e540]
+  - img [ref=e541]
+  - img [ref=e542]
+  - img [ref=e543]
+  - img [ref=e544]
+  - img [ref=e545]
+  - img [ref=e546]
+  - img [ref=e547]
+  - img [ref=e548]
+  - img [ref=e549]
+  - img [ref=e550]
+  - img [ref=e551]
+  - img [ref=e552]
+  - img [ref=e553]
+  - img [ref=e554]
+  - img [ref=e555]
+  - img [ref=e556]
+  - img [ref=e557]
+  - img [ref=e558]
+  - img [ref=e559]
+  - img [ref=e560]
+  - img [ref=e561]
+  - img [ref=e562]
+  - img [ref=e563]
+  - img [ref=e564]
+  - img [ref=e565]
+  - img [ref=e566]
+  - img [ref=e567]
+  - img [ref=e568]
+  - img [ref=e569]
+  - img [ref=e570]
+  - img [ref=e571]
+  - img [ref=e572]
+  - img [ref=e573]
+  - img [ref=e574]
+  - img [ref=e575]
+  - img [ref=e576]
+  - img [ref=e577]
+  - img [ref=e578]
+  - img [ref=e579]
+  - img [ref=e580]
+  - img [ref=e581]
+  - img [ref=e582]
+  - img [ref=e583]
+  - img [ref=e584]
+  - img [ref=e585]
+  - img [ref=e586]
+  - img [ref=e587]
+  - img [ref=e588]
+  - img [ref=e589]
+  - img [ref=e590]
+  - img [ref=e591]
+  - img [ref=e592]

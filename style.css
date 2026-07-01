@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100dvh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  color: #1f2933;
+  background: #f5f7fa;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.tagline {
+  flex: 1;
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7480;
+}
+
+.primary-indicator {
+  font-size: 0.85rem;
+  background: #eef4ff;
+  color: #2456c4;
+  padding: 4px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.panels {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  min-height: 0;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #e0e4e8;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+
+.panel.is-primary {
+  border-color: #2456c4;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px 4px;
+}
+
+.panel-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  gap: 6px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 10px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.search-form button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2456c4;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #1c4499;
+}
+
+.search-status {
+  margin: 0;
+  padding: 0 10px 6px;
+  min-height: 1.2em;
+  font-size: 0.75rem;
+  color: #6b7480;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-status.error {
+  color: #c0392b;
+}
+
+.map {
+  flex: 1;
+  min-height: 200px;
+}
+
+.panel-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-top: 1px solid #eef1f4;
+  font-size: 0.9rem;
+}
+
+.distance-value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.clear-btn {
+  margin-left: auto;
+  padding: 4px 12px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  background: #fff;
+  color: #52606d;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #f5f7fa;
+}
+
+.app-footer {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  color: #6b7480;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    min-height: 100dvh;
+  }
+
+  .app-header {
+    flex-wrap: wrap;
+  }
+
+  .panels {
+    flex-direction: column;
+  }
+
+  .map {
+    min-height: 320px;
+  }
+}
