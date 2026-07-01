@@ -1,14 +1,14 @@
 :root {
-  --bg: #0b1120;
-  --surface: #121a2c;
-  --surface-2: #1a2540;
-  --border: #253052;
-  --text: #e7ecf6;
-  --muted: #8d99b4;
-  --accent: #38bdf8;
-  --accent-2: #818cf8;
-  --accent-grad: linear-gradient(135deg, #38bdf8, #818cf8);
-  --danger: #fb7185;
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef2f8;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #0284c7;
+  --accent-2: #6366f1;
+  --accent-grad: linear-gradient(135deg, #0ea5e9, #6366f1);
+  --danger: #e11d48;
 }
 
 * {
@@ -38,9 +38,9 @@ body {
   padding: 12px 20px;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(60% 160% at 12% 0%, rgba(56, 189, 248, 0.12), transparent 60%),
-    radial-gradient(50% 160% at 60% 0%, rgba(129, 140, 248, 0.10), transparent 60%),
-    var(--bg);
+    radial-gradient(60% 160% at 12% 0%, rgba(14, 165, 233, 0.08), transparent 60%),
+    radial-gradient(50% 160% at 60% 0%, rgba(99, 102, 241, 0.06), transparent 60%),
+    var(--surface);
 }
 
 .app-header h1 {
@@ -71,7 +71,7 @@ body {
   padding: 6px 14px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: transparent;
+  background: var(--surface);
   color: var(--muted);
   font-size: 0.8rem;
   font-family: inherit;
@@ -81,9 +81,9 @@ body {
 }
 
 .ghost-btn:hover {
-  color: var(--text);
+  color: var(--accent);
   border-color: var(--accent);
-  background: rgba(56, 189, 248, 0.08);
+  background: rgba(14, 165, 233, 0.06);
 }
 
 .primary-indicator {
@@ -94,7 +94,7 @@ body {
   padding: 6px 14px;
   border-radius: 999px;
   white-space: nowrap;
-  box-shadow: 0 2px 12px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.35);
 }
 
 /* ---- パネル ---- */
@@ -117,12 +117,13 @@ body {
   overflow: hidden;
   min-width: 0;
   min-height: 0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .panel.is-primary {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 28px rgba(56, 189, 248, 0.18);
+  border-color: #7dd3fc;
+  box-shadow: 0 0 0 1px #7dd3fc, 0 4px 24px rgba(14, 165, 233, 0.18);
 }
 
 .panel-header {
@@ -160,16 +161,17 @@ body {
   font-size: 0.9rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
 }
 
 .search-form input::placeholder {
-  color: #5c6884;
+  color: #94a3b8;
 }
 
 .search-form input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+  border-color: #38bdf8;
+  background: var(--surface);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
 }
 
 .search-form button {
@@ -186,7 +188,7 @@ body {
 }
 
 .search-form button:hover {
-  filter: brightness(1.15);
+  filter: brightness(1.08);
 }
 
 .search-status {
@@ -231,7 +233,7 @@ body {
   padding: 4px 14px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: transparent;
+  background: var(--surface);
   color: var(--muted);
   font-size: 0.78rem;
   font-family: inherit;
@@ -254,13 +256,13 @@ body {
   margin: 0;
 }
 
-/* ---- Leaflet コントロールをダークUIに合わせる ---- */
+/* ---- Leaflet コントロールをUIに合わせる ---- */
 
 .leaflet-control-zoom.leaflet-bar {
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.12);
 }
 
 .leaflet-control-zoom a {
@@ -275,14 +277,14 @@ body {
 }
 
 .leaflet-control-scale-line {
-  background: rgba(11, 17, 32, 0.72);
+  background: rgba(255, 255, 255, 0.75);
   color: var(--text);
   border-color: var(--text);
   font-family: inherit;
 }
 
 .leaflet-control-attribution {
-  background: rgba(11, 17, 32, 0.72);
+  background: rgba(255, 255, 255, 0.75);
   color: var(--muted);
 }
 
